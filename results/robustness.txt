@@ -1,0 +1,41 @@
+Pooled (random-effects) median-Tm difference vs cytosolic reference, all eukaryote conditions
+  is_matrix    k=24  dTm=+0.59 °C  95%CI [+0.24, +0.94]
+  is_mim       k=24  dTm=+1.53 °C  95%CI [+1.13, +1.93]
+  is_mito_any  k=24  dTm=+0.92 °C  95%CI [+0.58, +1.26]
+  go_matrix    k=24  dTm=+0.78 °C  95%CI [+0.42, +1.15]
+  oxphos       k=24  dTm=+2.11 °C  95%CI [+1.66, +2.56]
+  mitoribo     k=23  dTm=-0.50 °C  95%CI [-0.89, -0.11]
+  tca          k=23  dTm=+0.82 °C  95%CI [+0.18, +1.46]
+  mtdna        k=18  dTm=-0.38 °C  95%CI [-0.74, -0.03]
+  chap         k= 5  dTm=+2.97 °C  95%CI [+2.19, +3.75]
+
+Probability of superiority (matrix more stable than cytosolic), non-melters treated as most stable; 0.5 = no difference
+  matrix: P(sup)=0.533 ± 0.046 (k=24)
+
+Non-melter fraction (matrix vs cytosolic):
+                                                     nm_matrix  nm_cyto
+cond                                                                   
+Caenorhabditis elegans|N2|lysate|0.5% NP40               0.259    0.388
+Danio rerio|Zendo cells|lysate|0.5% NP40                 0.071    0.099
+Drosophila melanogaster|SII cells|lysate|0.5% NP40       0.033    0.026
+Homo sapiens|A549|lysate|PBS                             0.104    0.251
+Homo sapiens|HAOEC|cells|PBS                             0.084    0.083
+Homo sapiens|HEK293T|cells|PBS                           0.056    0.047
+Homo sapiens|HEK293|cells|0.5% NP40                      0.142    0.153
+Homo sapiens|HL60|cells|PBS                              0.067    0.059
+Homo sapiens|HaCaT|cells|PBS                             0.087    0.045
+Homo sapiens|HepG2|cells|PBS                             0.061    0.053
+Homo sapiens|Jurkat|cells|PBS                            0.032    0.031
+Homo sapiens|Jurkat|lysate|0.5% NP40                     0.051    0.082
+Homo sapiens|K562|cells|0.5% NP40                        0.080    0.149
+Homo sapiens|K562|cells|PBS                              0.099    0.126
+Homo sapiens|K562|lysate|0.5% NP40                       0.154    0.373
+Homo sapiens|K562|lysate|PBS                             0.063    0.068
+Homo sapiens|U937|cells|PBS                              0.064    0.059
+Homo sapiens|colon cancer spheroids|cells|0.5% NP40      0.103    0.161
+Homo sapiens|hepatocytes|lysate|PBS                      0.074    0.189
+Homo sapiens|lung fibroblasts|lysate|0.5% NP40           0.081    0.191
+Homo sapiens|primary Tcells|cells|PBS                    0.034    0.012
+Mus musculus|BMDC|lysate|0.5% NP40                       0.078    0.130
+Mus musculus|liver tissue|lysate|0.5% NP40               0.208    0.374
+Saccharomyces cerevisiae|BY4741|lysate|0.5% NP40         0.048    0.073

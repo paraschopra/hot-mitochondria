@@ -1,0 +1,41 @@
+Per-condition matrix-cytosol median Tm difference (replicate datasets averaged within lab x condition):
+EMBL|Homo sapiens|HAOEC|cells|PBS                           0.75
+EMBL|Homo sapiens|HEK293T|cells|PBS                         1.13
+EMBL|Homo sapiens|HL60|cells|PBS                            1.15
+EMBL|Homo sapiens|HaCaT|cells|PBS                           1.90
+EMBL|Homo sapiens|HepG2|cells|PBS                           1.35
+EMBL|Homo sapiens|Jurkat|cells|PBS                          1.66
+EMBL|Homo sapiens|K562|cells|PBS                            2.51
+EMBL|Homo sapiens|U937|cells|PBS                            1.02
+EMBL|Homo sapiens|primary Tcells|cells|PBS                  1.59
+OS|Homo sapiens|A549|lysate|PBS                            -1.53
+OS|Homo sapiens|HEK293|cells|0.5% NP40                      1.02
+OS|Homo sapiens|Jurkat|lysate|0.5% NP40                     1.67
+OS|Homo sapiens|K562|cells|PBS                             -0.93
+OS|Homo sapiens|K562|lysate|PBS                             1.70
+OS|Homo sapiens|colon cancer spheroids|cells|0.5% NP40      1.40
+OS|Homo sapiens|hepatocytes|lysate|PBS                     -1.56
+OS|Homo sapiens|lung fibroblasts|lysate|0.5% NP40           0.40
+OS|Mus musculus|BMDC|lysate|0.5% NP40                      -0.65
+TUM|Caenorhabditis elegans|N2|lysate|0.5% NP40             -1.46
+TUM|Drosophila melanogaster|SII cells|lysate|0.5% NP40     -0.19
+TUM|Homo sapiens|K562|cells|0.5% NP40                       1.79
+TUM|Homo sapiens|K562|lysate|0.5% NP40                     -0.35
+TUM|Mus musculus|liver tissue|lysate|0.5% NP40             -0.10
+Utrecht|Danio rerio|Zendo cells|lysate|0.5% NP40           -0.05
+Utrecht|Saccharomyces cerevisiae|BY4741|lysate|0.5% NP40    0.07
+  [all         ] k=25 mean dTm=+0.57 °C  two-level bootstrap 95% CI [+0.02, +1.10]
+  [lysate      ] k=12 mean dTm=-0.17 °C  two-level bootstrap 95% CI [-1.00, +0.58]
+  [intact cells] k=13 mean dTm=+1.26 °C  two-level bootstrap 95% CI [+0.72, +1.77]
+  [non-mammal  ] k= 4 mean dTm=-0.41 °C  two-level bootstrap 95% CI [-1.33, +0.34]
+
+Calibration slope (species bootstrap): all 13 species median 0.81 [0.48, 0.93]; eukaryotes median 0.55 [0.23, 0.87]
+  [lysate] hot matrix +10 °C is compatible only if coupling slope < 0.058; P(slope<req): all-species 0.000, eukaryotes 0.006
+  [lysate] hot matrix +15 °C is compatible only if coupling slope < 0.039; P(slope<req): all-species 0.000, eukaryotes 0.004
+  [all] hot matrix +10 °C is compatible only if coupling slope < 0.110; P(slope<req): all-species 0.000, eukaryotes 0.010
+  [all] hot matrix +15 °C is compatible only if coupling slope < 0.073; P(slope<req): all-species 0.000, eukaryotes 0.007
+  [intact cells] hot matrix +10 °C is compatible only if coupling slope < 0.177; P(slope<req): all-species 0.000, eukaryotes 0.015
+  [intact cells] hot matrix +15 °C is compatible only if coupling slope < 0.118; P(slope<req): all-species 0.000, eukaryotes 0.011
+
+Probability of superiority P(matrix Tm > cytosolic Tm), non-melters treated as most stable:
+  pooled P(sup)=0.534 [0.484, 0.585] over 25 conditions (0.5 = no difference)

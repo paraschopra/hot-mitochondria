@@ -1,0 +1,19 @@
+# large public inputs, caches and local tooling (fetched/rebuilt by scripts; see README)
+data/
+hf_cache/
+tools/
+pylib/
+.mpl/
+__pycache__/
+.DS_Store
+
+# private outreach material and local review surface
+outreach/contacts.md
+outreach/emails.md
+outreach/hot_mito_reanalysis_code.zip
+site/
+review_brief.md
+
+# regenerable media intermediates
+video/score.wav
+video/_*

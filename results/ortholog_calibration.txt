@@ -1,0 +1,7 @@
+Danio rerio                ΔOGT= 9  n_orth=2852  median ΔTm(human-species): all=+1.03  matrix=+2.41  nonmito=+0.83
+Drosophila melanogaster    ΔOGT= 9  n_orth= 955  median ΔTm(human-species): all=+9.16  matrix=+10.10  nonmito=+8.94
+Caenorhabditis elegans     ΔOGT=17  n_orth=1476  median ΔTm(human-species): all=+11.36  matrix=+11.89  nonmito=+11.15
+Saccharomyces cerevisiae   ΔOGT= 7  n_orth= 973  median ΔTm(human-species): all=+4.14  matrix=+3.74  nonmito=+4.27
+Mus musculus               ΔOGT= 0  n_orth=11856  median ΔTm(human-species): all=+1.98  matrix=+2.56  nonmito=+1.84
+ortholog-paired slope (through origin) = 0.628 °C Tm per °C
+OLS slope=0.552±0.290, intercept=0.89

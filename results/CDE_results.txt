@@ -1,0 +1,186 @@
+C. paralog pairs [lysate]: n_pairs=70, median dTm(mito-cyto)=-0.63, mean=-0.78 ± 0.51 (SEM), Wilcoxon p=0.174, frac mito more stable=0.41
+    mito     cyto   mean  count
+ ALDH4A1  ALDH1A1 -14.04     11
+    GPT2      GPT -10.89      5
+ALDH18A1  ALDH1A1  -9.77     11
+   WARS2    WARS1  -8.42      6
+   ACAT1    ACAT2  -7.10     13
+    GFM1     EEF2  -7.09     14
+   ALDH2  ALDH1A1  -6.96     11
+    PNKD     HAGH  -5.88     11
+  HMGCS2   HMGCS1  -5.29      6
+    GPX4     GPX1  -5.15     10
+    NIT2     NIT1  -4.94     13
+   MTIF2    EIF5B  -4.90     14
+    IDH2     IDH1  -4.09     14
+     ME2      ME1  -3.64     12
+   SHMT2    SHMT1  -3.19     14
+    TUFM   EEF1A1  -3.11     10
+   NARS2    NARS1  -2.81     12
+   ACADM    ACOX1  -2.59     13
+    GOT2     GOT1  -2.37      6
+    TSFM   EEF1B2  -2.30      5
+   TFB2M    DIMT1  -2.29      6
+   EARS2    EPRS1  -2.23     12
+   HIBCH     ECH1  -2.01     14
+    GCDH    ACADM  -2.01     13
+   SARS2    SARS1  -1.99     13
+   TARS2    TARS1  -1.86     14
+   HADHA   EHHADH  -1.79      8
+    NME4     NME1  -1.68      6
+   ECHS1     ECH1  -1.57     14
+  DNAJA3   DNAJA1  -1.18     10
+    ARG2     ARG1  -0.91      2
+     GLS     GLS2  -0.85      2
+    PPA2     PPA1  -0.81     14
+   ETHE1     HAGH  -0.76     13
+   FARS2    FARSA  -0.74      9
+   DARS2    DARS1  -0.53     13
+     AUH     ECH1  -0.49     11
+ MTHFD1L   MTHFD1  -0.36     10
+   HSPA9    HSPA8  -0.36     14
+    ACO2     ACO1  -0.17     14
+   ACSF3    ACSF2  -0.16     10
+     AK4      AK1   0.04     12
+  PITRM1      IDE   0.64     14
+    PCK2     PCK1   0.67      4
+  MRPL12    RPLP1   0.85      3
+    PPIF     PPIA   1.02     14
+    MDH2     MDH1   1.10     14
+    POLG    POLA1   1.11      5
+   YARS2    YARS1   1.24     14
+  MTHFD2   MTHFD1   1.24     10
+   LARS2    LARS1   1.27      4
+  TXNRD2   TXNRD1   1.58     10
+   ACOT2    ACOT1   1.60      4
+   TRAP1 HSP90AB1   1.73     14
+   TRAP1 HSP90AA1   1.91     14
+     TK2      DCK   2.04      5
+  LACTB2     HAGH   2.04     11
+   HARS2    HARS1   2.18      7
+   VARS2    VARS1   2.84      7
+   PNPT1  EXOSC10   2.90      9
+   PRDX3    PRDX1   3.16      8
+   ACSS1    ACSS2   3.26      4
+     AK3      AK1   3.31     12
+   RARS2    RARS1   4.62     14
+   RRM2B     RRM2   5.32      3
+   GLRX5    GLRX3   5.65      8
+   IARS2    IARS1   5.68     14
+   DGUOK      DCK   7.35      4
+     AK2      AK1   8.55     12
+     ME3      ME1   9.73      2
+C. paralog pairs [cells]: n_pairs=74, median dTm(mito-cyto)=0.16, mean=-0.06 ± 0.36 (SEM), Wilcoxon p=0.989, frac mito more stable=0.51
+    mito     cyto   mean  count
+   WARS2    WARS1 -12.12      3
+ ALDH4A1  ALDH1A1  -5.25     20
+   EARS2    EPRS1  -5.09      4
+    GFM1     EEF2  -4.73     41
+   MTIF2    EIF5B  -4.60     41
+     ME2      ME1  -4.43     26
+   NARS2    NARS1  -3.89      8
+ALDH18A1  ALDH1A1  -3.52     20
+    TSFM   EEF1B2  -3.31     40
+   TFB2M    DIMT1  -3.22      3
+   MSRB2    MSRB1  -3.03      3
+    GPT2      GPT  -2.67      6
+   SARS2    SARS1  -2.67      8
+    TXN2      TXN  -2.55      3
+   HIBCH     ECH1  -2.43     41
+     ME3      ME1  -2.25      1
+     AUH     ECH1  -2.17     36
+   ALDH2  ALDH1A1  -2.17     18
+  DNAJA3   DNAJA1  -1.83     33
+    TUFM   EEF1A1  -1.62     41
+    IDH2     IDH1  -1.61     41
+   ACADM    ACOX1  -1.57     21
+    NIT2     NIT1  -1.36     27
+   FARS2    FARSA  -1.12     30
+    PNKD     HAGH  -1.04     18
+    ACO2     ACO1  -0.89     41
+    MTG1     GNL2  -0.73     11
+   ACSF3    ACSF2  -0.69     40
+    GCDH    ACADM  -0.62     40
+    GPX4     GPX1  -0.55     11
+   TARS2    TARS1  -0.55      7
+    SOD2     SOD1  -0.44      4
+   ACAT1    ACAT2  -0.20     39
+   HADHA   EHHADH  -0.20     20
+   YARS2    YARS1  -0.19      7
+   ECHS1     ECH1  -0.08     40
+   HSPA9    HSPA8   0.12     41
+    POLG    POLA1   0.19     32
+   ACSS1    ACSS2   0.24     31
+    CA5B      CA2   0.40      3
+ MTHFD1L   MTHFD1   0.48     41
+    PPIF     PPIA   0.52     10
+  PITRM1      IDE   0.61     41
+  TXNRD2   TXNRD1   0.64     25
+     TK2      DCK   0.82     16
+   SHMT2    SHMT1   0.85     31
+  MRPL12    RPLP1   0.88      4
+    PPA2     PPA1   0.95     41
+  LACTB2     HAGH   1.02     39
+   DARS2    DARS1   1.12      8
+     GLS     GLS2   1.19      6
+    GOT2     GOT1   1.23      3
+   TRAP1 HSP90AA1   1.27     41
+   TRAP1 HSP90AB1   1.27     41
+   ACOT2    ACOT1   1.48      2
+     AK4      AK1   1.49      8
+   RRM2B     RRM2   1.51     10
+    MDH2     MDH1   1.67     41
+   ETHE1     HAGH   1.73     41
+  MTHFD2   MTHFD1   1.94     39
+   VARS2    VARS1   1.98      2
+ SUPV3L1   SKIV2L   2.64     21
+    PCK2     PCK1   2.73      6
+    ARG2     ARG1   2.75      6
+   DGUOK      DCK   3.04      8
+   GLRX5    GLRX3   3.05     26
+   PNPT1  EXOSC10   3.35     23
+   PRDX3    PRDX1   3.38     41
+   RARS2    RARS1   3.76      8
+     AK3      AK1   4.42     26
+   HARS2    HARS1   5.26      6
+   LARS2    LARS1   6.11      3
+     AK2      AK1   6.42     26
+   IARS2    IARS1   8.69      6
+
+D. Per-protein shift Tm(intact cells) - Tm(lysate); matrix vs cytosolic reference
+  K562 0.5% NP40: n_matrix=274, n_cyto=1381, median shift matrix=3.40, cyto=1.32, relative=2.08 °C, MWU p=4.1e-15
+     lysate Tm 40-50 only: n_matrix=176, relative shift=2.39 °C
+  K562 PBS: n_matrix=229, n_cyto=1491, median shift matrix=0.23, cyto=2.77, relative=-2.53 °C, MWU p=2.3e-22
+     lysate Tm 40-50 only: n_matrix=82, relative shift=-2.75 °C
+  Jurkat PBS/NP40: n_matrix=0, n_cyto=0, median shift matrix=nan, cyto=nan, relative=nan °C, MWU p=nan
+     lysate Tm 40-50 only: n_matrix=0, relative shift=nan °C
+
+E. Fraction of proteins with Tm below (growth temp + ΔT)
+  Homo sapiens               lysate T=  37°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=703)
+  Homo sapiens               lysate T=  42°C (ambient+ 5): matrix   0.0%  cytosolic   0.2%  (n_matrix=703)
+  Homo sapiens               lysate T=  47°C (ambient+10): matrix   8.4%  cytosolic   7.7%  (n_matrix=703)
+  Homo sapiens               lysate T=  50°C (ambient+13): matrix  33.3%  cytosolic  30.4%  (n_matrix=703)
+  Homo sapiens               cells  T=  37°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=1035)
+  Homo sapiens               cells  T=  42°C (ambient+ 5): matrix   0.0%  cytosolic   0.1%  (n_matrix=1035)
+  Homo sapiens               cells  T=  47°C (ambient+10): matrix   6.4%  cytosolic  14.7%  (n_matrix=1035)
+  Homo sapiens               cells  T=  50°C (ambient+13): matrix  32.6%  cytosolic  43.9%  (n_matrix=1035)
+  Mus musculus               lysate T=  37°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=536)
+  Mus musculus               lysate T=  42°C (ambient+ 5): matrix   0.6%  cytosolic   0.5%  (n_matrix=536)
+  Mus musculus               lysate T=  47°C (ambient+10): matrix  24.4%  cytosolic  14.6%  (n_matrix=536)
+  Mus musculus               lysate T=  50°C (ambient+13): matrix  47.4%  cytosolic  41.0%  (n_matrix=536)
+  Danio rerio                lysate T=  28°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=183)
+  Danio rerio                lysate T=  33°C (ambient+ 5): matrix   0.0%  cytosolic   0.0%  (n_matrix=183)
+  Danio rerio                lysate T=  38°C (ambient+10): matrix   0.0%  cytosolic   0.0%  (n_matrix=183)
+  Danio rerio                lysate T=  41°C (ambient+13): matrix   0.0%  cytosolic   0.0%  (n_matrix=183)
+  Drosophila melanogaster    lysate T=  25°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=90)
+  Drosophila melanogaster    lysate T=  30°C (ambient+ 5): matrix   0.0%  cytosolic   0.0%  (n_matrix=90)
+  Drosophila melanogaster    lysate T=  35°C (ambient+10): matrix   1.1%  cytosolic   0.4%  (n_matrix=90)
+  Drosophila melanogaster    lysate T=  38°C (ambient+13): matrix  11.1%  cytosolic   6.3%  (n_matrix=90)
+  Caenorhabditis elegans     lysate T=  20°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=336)
+  Caenorhabditis elegans     lysate T=  25°C (ambient+ 5): matrix   0.0%  cytosolic   0.0%  (n_matrix=336)
+  Caenorhabditis elegans     lysate T=  30°C (ambient+10): matrix   0.0%  cytosolic   0.1%  (n_matrix=336)
+  Caenorhabditis elegans     lysate T=  33°C (ambient+13): matrix   2.7%  cytosolic   0.9%  (n_matrix=336)
+  Saccharomyces cerevisiae   lysate T=  30°C (ambient+ 0): matrix   0.0%  cytosolic   0.0%  (n_matrix=186)
+  Saccharomyces cerevisiae   lysate T=  35°C (ambient+ 5): matrix   0.0%  cytosolic   0.0%  (n_matrix=186)
+  Saccharomyces cerevisiae   lysate T=  40°C (ambient+10): matrix   0.0%  cytosolic   0.0%  (n_matrix=186)
+  Saccharomyces cerevisiae   lysate T=  43°C (ambient+13): matrix   5.4%  cytosolic  10.9%  (n_matrix=186)

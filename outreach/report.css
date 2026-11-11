@@ -1,0 +1,5 @@
+@page{size:A4;margin:16mm}
+body{font:10pt/1.45 Charter,Georgia,serif;color:#151513;max-width:none;margin:0;padding:0}
+h1{font:700 17pt/1.2 ui-sans-serif,system-ui,sans-serif} h2{font:700 12.5pt ui-sans-serif,system-ui,sans-serif;border-bottom:1px solid #ddd;padding-bottom:3px;margin-top:18px} h3{font:700 10.5pt ui-sans-serif,system-ui,sans-serif}
+table{border-collapse:collapse;font:8.6pt/1.35 ui-sans-serif,system-ui,sans-serif;margin:6px 0;width:100%} th,td{border-bottom:1px solid #e4e1d8;padding:3px 5px;text-align:left;vertical-align:top} th{background:#f6f4ee}
+img{width:100%} code{font-size:8.5pt;background:#f3f1ea;padding:0 3px} pre{font-size:8pt;background:#f3f1ea;padding:6px;white-space:pre-wrap}

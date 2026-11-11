@@ -1,0 +1,4 @@
+curated pairs 52, passing localization check 47; excluded: [('CKMT1A', 'CKB', None, 'nonmito'), ('CKMT2', 'CKM', None, 'nonmito'), ('TXNRD2', 'TXNRD1', 'Matrix', 'mito_other'), ('TOP1MT', 'TOP1', None, 'nonmito'), ('PITRM1', 'IDE', 'Matrix', 'Matrix')]
+[lysate] n_pairs=44 mean ΔTm(mito-cyto)=-0.80 °C, bootstrap 95% CI [-2.05, +0.40], median -0.87, frac mito more stable 0.41, Wilcoxon p=0.24; pairs with ΔTm>+5: 3
+[cells] n_pairs=46 mean ΔTm(mito-cyto)=-0.06 °C, bootstrap 95% CI [-1.22, +1.08], median -0.12, frac mito more stable 0.48, Wilcoxon p=0.87; pairs with ΔTm>+5: 4
+[all] n_pairs=47 mean ΔTm(mito-cyto)=-0.45 °C, bootstrap 95% CI [-1.51, +0.60], median -0.49, frac mito more stable 0.47, Wilcoxon p=0.46; pairs with ΔTm>+5: 2

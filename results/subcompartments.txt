@@ -1,0 +1,11 @@
+Median Tm difference vs cytosolic reference by mitochondrial set; mean over conditions, two-level bootstrap 95% CI (500 reps)
+  matrix (all)                   [lysate      ] k=12 genes= 505  dTm=-0.17 °C  95% CI [-1.01, +0.56]
+  matrix (all)                   [intact cells] k=13 genes= 505  dTm=+1.26 °C  95% CI [+0.67, +1.71]
+  matrix, soluble (non-OXPHOS)   [lysate      ] k=12 genes= 493  dTm=-0.25 °C  95% CI [-0.98, +0.48]
+  matrix, soluble (non-OXPHOS)   [intact cells] k=13 genes= 493  dTm=+1.23 °C  95% CI [+0.74, +1.72]
+  inner membrane (all)           [lysate      ] k=12 genes= 307  dTm=+0.18 °C  95% CI [-1.20, +1.68]
+  inner membrane (all)           [intact cells] k=13 genes= 307  dTm=+2.20 °C  95% CI [+1.44, +2.83]
+  inner membrane, non-OXPHOS     [lysate      ] k=12 genes= 183  dTm=-0.36 °C  95% CI [-2.09, +1.30]
+  inner membrane, non-OXPHOS     [intact cells] k=13 genes= 183  dTm=+1.87 °C  95% CI [+1.15, +2.62]
+  OXPHOS subunits                [lysate      ] k=12 genes= 147  dTm=+1.08 °C  95% CI [-0.62, +2.52]
+  OXPHOS subunits                [intact cells] k=13 genes= 147  dTm=+2.77 °C  95% CI [+1.89, +3.89]

@@ -1,0 +1,25 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/196 [00:00<?, ?it/s]Loading weights:   8%|▊         | 15/196 [00:00<00:04, 36.32it/s]Loading weights:  44%|████▍     | 87/196 [00:00<00:00, 208.60it/s]Loading weights:  66%|██████▌   | 129/196 [00:01<00:00, 127.13it/s]Loading weights:  80%|███████▉  | 156/196 [00:01<00:00, 112.60it/s]Loading weights:  90%|████████▉ | 176/196 [00:01<00:00, 90.80it/s] Loading weights:  97%|█████████▋| 191/196 [00:01<00:00, 97.85it/s]Loading weights: 100%|██████████| 196/196 [00:01<00:00, 108.44it/s]
+0 3s
+200 17s
+400 33s
+600 54s
+800 81s
+1000 113s
+1200 164s
+1400 243s
+1600 313s
+1800 394s
+2000 505s
+2200 655s
+2400 857s
+nan rows 0
+Traceback (most recent call last):
+  File "/Users/paraschopra/Documents/Code/random/novel-discovery/scripts/13_temstapro.py", line 30, in <module>
+    m=MLP_C2H2(1024,512,256); m.load_state_dict(torch.load(f,map_location='cpu')); m.eval()
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paraschopra/opt/anaconda3/envs/pytorch-latest/lib/python3.12/site-packages/torch/nn/modules/module.py", line 2638, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for MLP_C2H2:
+	Missing key(s) in state_dict: "model.0.weight", "model.0.bias", "model.2.weight", "model.2.bias", "model.4.weight", "model.4.bias". 
+	Unexpected key(s) in state_dict: "epoch", "global_step", "pytorch-lightning_version", "state_dict", "loops", "callbacks", "optimizer_states", "lr_schedulers". 

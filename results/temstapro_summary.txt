@@ -1,0 +1,11 @@
+positive control Caenorhabditis elegans     ΔOGT=17: human-minus-ortholog score (cytosolic) +0.806 ± 0.068, n=284
+positive control Drosophila melanogaster    ΔOGT= 9: human-minus-ortholog score (cytosolic) +0.362 ± 0.096, n=126
+positive control Saccharomyces cerevisiae   ΔOGT= 7: human-minus-ortholog score (cytosolic) +0.910 ± 0.103, n=152
+positive control Danio rerio                ΔOGT= 9: human-minus-ortholog score (cytosolic) +0.136 ± 0.039, n=270
+calibration k = 0.0491 score/°C (bootstrap 95% CI 0.0425..0.0556)
+Homo sapiens               matrix-minus-cytosolic score -0.082 [-0.207,+0.051] -> implied -1.7 °C [-4.2,+1.0]  (hot matrix predicts +10..+15)
+Caenorhabditis elegans     matrix-minus-cytosolic score -0.064 [-0.227,+0.106] -> implied -1.3 °C [-4.6,+2.2]  (hot matrix predicts +10..+15)
+Drosophila melanogaster    matrix-minus-cytosolic score -0.144 [-0.421,+0.136] -> implied -2.9 °C [-8.6,+2.8]  (hot matrix predicts +10..+15)
+Saccharomyces cerevisiae   matrix-minus-cytosolic score -0.220 [-0.450,+0.004] -> implied -4.5 °C [-9.2,+0.1]  (hot matrix predicts +10..+15)
+Danio rerio                matrix-minus-cytosolic score -0.303 [-0.535,-0.065] -> implied -6.2 °C [-10.9,-1.3]  (hot matrix predicts +10..+15)
+mean over 5 species: -0.163 -> -3.3 °C; species with positive offset: 0/5

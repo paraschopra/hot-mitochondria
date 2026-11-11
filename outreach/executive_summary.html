@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Hot mitochondria: a proteome test</title>
+<style>
+@page{size:A4;margin:16mm 16mm 16mm 16mm}
+body{font:9.9pt/1.4 Charter,"Iowan Old Style",Georgia,serif;color:#151513;margin:0}
+h1{font:700 19pt/1.2 ui-sans-serif,system-ui,-apple-system,sans-serif;margin:0 0 4px}
+h2{font:700 12pt/1.25 ui-sans-serif,system-ui,sans-serif;margin:16px 0 5px;color:#151513;border-bottom:1px solid #ddd9cf;padding-bottom:3px}
+.sub{font:11pt/1.35 ui-sans-serif,system-ui,sans-serif;color:#4d4c47;margin-bottom:6px}
+.meta{font:8.8pt/1.4 ui-sans-serif,system-ui,sans-serif;color:#7d7b74;margin-bottom:10px}
+.box{border-left:3px solid #2a78d6;background:#f2f7fd;padding:8px 12px;margin:8px 0}
+.warn{border-left-color:#c4501f;background:#fbf0ea}
+table{border-collapse:collapse;width:100%;font:8.9pt/1.35 ui-sans-serif,system-ui,sans-serif;margin:6px 0}
+th,td{border-bottom:1px solid #e4e1d8;padding:4px 6px;text-align:left;vertical-align:top}
+th{background:#f6f4ee;font-weight:600}
+td.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+img{width:100%;border:1px solid #e4e1d8;margin:6px 0 2px}
+.cap{font:8.3pt/1.35 ui-sans-serif,system-ui,sans-serif;color:#4d4c47}
+ul,ol{margin:4px 0 4px 18px;padding:0} li{margin:2px 0}
+.pb{page-break-before:always}
+.small{font-size:9pt;color:#4d4c47}
+</style></head><body>
+
+<h1>Mitochondrial matrix proteins carry no signature of a 50&nbsp;°C environment</h1>
+<div class="sub">A probe-independent test of the "hot mitochondria" hypothesis using public thermal-proteome data, and a proposed one-experiment resolution</div>
+<div class="meta">Paras Chopra · paras@paraschopra.com · Bangalore, India · October 2026 · Executive summary (4 pages). Full technical report, code and intermediate results: <a href="https://github.com/paraschopra/hot-mitochondria">github.com/paraschopra/hot-mitochondria</a>.</div>
+
+<div class="box"><b>In one paragraph.</b> Chrétien et&nbsp;al. (2018) and Terzioglu et&nbsp;al. (2023) reported that the mitochondrial matrix sits at ~50&nbsp;°C, 10–15&nbsp;°C above the cytosol, as a steady state. Across 13 species, median proteome melting temperature (Tm) rises ~0.55–0.81&nbsp;°C per °C of growth temperature. A matrix that is permanently 10–15&nbsp;°C hotter should therefore have proteins melting ~5–12&nbsp;°C above their cytosolic neighbours. Reanalysing the Meltome Atlas (62 datasets, 4 labs, 6 eukaryotic species, 126,176 Tm measurements), we find matrix − cytosol ΔTm = <b>−0.17&nbsp;°C</b> in lysates (intrinsic stability; 95% CI −1.00 to +0.58) and <b>+1.26&nbsp;°C</b> in intact cells (+0.72 to +1.77). Same-family mitochondrial/cytosolic paralog pairs show no difference. A protein-language-model thermostability predictor shows no heat-adaptation signature in any of five species. A persistently hot matrix is compatible with these data only if an unobserved, matrix-specific, non-intrinsic stabilisation worth ~5–12&nbsp;°C exists. We propose a single TPP experiment (respiration on vs off in intact cells) that would decide between the two pictures.</div>
+
+<h2>Why this question</h2>
+<p>The hot-mitochondria claim remains openly contested in 2025–2026: critiques recommending rejection (Treberg &amp; Mailloux 2026, <i>Acta Physiol</i>; Tkachenko et&nbsp;al. 2026 preprint), defences (Fahimi, Lynch &amp; Matta 2026, <i>BioEssays</i>; Rustin et&nbsp;al. 2025, <i>TIBS</i>), and neutral reviews calling it "a matter of intense debate" (Beignon et&nbsp;al. 2026). Every existing measurement uses a fluorescent or diamond thermometer with known confounders (membrane potential, binding, pH, extrapolated calibration). Physics objects to the size of the gradient (the "10<sup>5</sup> gap"), though a 2026 study reports that intracellular heat dissipates non-diffusively over seconds, reopening that argument (Takarada et&nbsp;al. 2026, <i>Nat Commun</i>). What has been missing is a test that relies on neither the probes nor heat-transfer theory: whether the matrix proteins themselves show the adaptation a hot environment would select for.</p>
+
+<h2>Key results</h2>
+<table>
+<tr><th>Test</th><th>Matrix − cytosol</th><th>95% CI</th><th>Prediction if matrix is +10–15&nbsp;°C</th></tr>
+<tr><td>Lysates: intrinsic stability (12 conditions)</td><td class="n"><b>−0.17&nbsp;°C</b></td><td class="n">−1.00, +0.58</td><td class="n">+5.5 to +12</td></tr>
+<tr><td>Intact cells (13 conditions)</td><td class="n"><b>+1.26&nbsp;°C</b></td><td class="n">+0.72, +1.77</td><td class="n">+5.5 to +12</td></tr>
+<tr><td>Non-mammals: worm, fly S2, zebrafish, yeast</td><td class="n">−0.41&nbsp;°C</td><td class="n">−1.33, +0.34</td><td class="n">+5.5 to +12</td></tr>
+<tr><td>47 curated mito/cyto paralog pairs (human)</td><td class="n">−0.45&nbsp;°C</td><td class="n">−1.51, +0.60</td><td class="n">+5.5 to +12</td></tr>
+<tr><td>Sequence thermometer (TemStaPro/ProtT5), human</td><td class="n">−1.7&nbsp;°C*</td><td class="n">−4.2, +1.0</td><td class="n">+10 to +15*</td></tr>
+<tr><td>Inner-membrane proteins: lysates / intact cells</td><td class="n">+0.18 / +2.2&nbsp;°C</td><td class="n">−1.2, +1.7 / +1.4, +2.8</td><td class="n">+5.5 to +12</td></tr>
+<tr><td>Respiratory chain (OXPHOS) subunits: lysates / intact cells</td><td class="n">+1.1 / +2.8&nbsp;°C</td><td class="n">−0.6, +2.5 / +1.9, +3.9</td><td class="n">+5.5 to +12</td></tr>
+<tr><td>Mitoribosome / mtDNA maintenance</td><td class="n">−0.5 / −0.4&nbsp;°C</td><td class="n">both &lt; 0</td><td class="n">+5.5 to +12</td></tr>
+</table>
+<div class="small">*Implied operating-temperature difference. Positive control passes: human proteins read hotter than worm, fly, fish and yeast orthologs. 0 of 5 species show matrix &gt; cytosol. For the lysate result to be consistent with +10&nbsp;°C, the Tm–temperature coupling would need to be &lt;0.06 (observed 0.55–0.81; species bootstrap P ≤ 0.006).</div>
+
+<div class="pb"></div>
+<img src="../figures/fig1_grid.png" alt="Main figure" style="width:80%;display:block;margin:0 auto">
+<div class="cap"><b>A</b> Proteome Tm vs growth temperature, 13 species. <b>B</b> Matrix − cytosol ΔTm in 25 conditions (cell · species · lab), grouped by intact cells / lysates; diamonds = pooled. <b>C</b> Alternative definitions, sub-compartments, pathways, paralogs. <b>D</b> Sequence thermometer, five species. Orange bands = prediction for a 10–15&nbsp;°C hotter matrix.</div>
+
+<h2>What is new relative to prior work</h2>
+<p>The closest prior work is Jacobs et&nbsp;al. 2024 (<i>FEBS J</i>, by the hypothesis's proponents). In a supplementary analysis of intact K562/Jurkat TPP data they noted mitochondrial proteins are ~2&nbsp;°C more stable than the proteome median and read this as <i>support</i>. We agree with the observation and add:</p>
+<ol>
+<li><b>The expected effect size.</b> Calibrated across 13 species, a 10–15&nbsp;°C hotter compartment predicts +5–12&nbsp;°C, not +2. The matrix median Tm (~51&nbsp;°C) would sit at the claimed operating temperature, i.e. zero safety margin, unlike any organism measured.</li>
+<li><b>Intrinsic vs environmental split.</b> In lysates the gap is ~0. The small in-cell gap is environmental, not sequence adaptation.</li>
+<li><b>Within-family control</b> (47 curated paralog pairs, localisation-verified).</li>
+<li><b>An assay-independent line</b>: sequence-encoded thermostability, with a positive control.</li>
+<li><b>Six species, four labs</b>, including <i>Drosophila</i> S2 cells, in which hot mitochondria were also claimed.</li>
+</ol>
+<p class="small">Searches of PubMed, Europe PMC full text (~318 citing papers of Chrétien 2018), bioRxiv, arXiv and Google Scholar found no controlled proteome-wide, paralog or sequence-based test. Thermal profiling with respiratory inhibitors has been done only in lysates (Cheng et&nbsp;al. 2025) or isolated mitochondria (Rivera-Mejías et&nbsp;al. 2024), neither of which can detect a hot matrix.</p>
+
+<div class="pb"></div>
+<h2>Exact claim, and what it is not</h2>
+<div class="box"><b>Claim.</b> The matrix proteome shows no intrinsic thermal adaptation relative to the cytosol (in measured stability, in same-family pairs, or in sequence-encoded signatures) across six species. A persistently 10–15&nbsp;°C hotter matrix is therefore compatible with the data only if an unobserved matrix-specific, non-intrinsic stabilisation worth ~5–12&nbsp;°C exists, or if probe-reported "temperature" is not a steady bulk temperature.</div>
+<div class="box warn"><b>Not claimed.</b> We did not measure mitochondrial temperature, and we don't claim an upper bound of 1–2&nbsp;°C. The test concerns a <i>steady</i> excess (sustained over minutes to evolutionary time). It does not address transient, picosecond-scale heat spikes at the inner membrane (Fahimi, Lynch &amp; Matta 2026), which would leave no imprint on protein stability; even proteins embedded in the inner membrane show no adaptation in lysates (table above). The inference assumes that the cross-species Tm–temperature coupling transfers, at least roughly, to compartments within a cell. This is the central stated assumption.</div>
+
+<h2>How the analysis was checked</h2>
+<ul>
+<li>Replicated across 4 labs, 25 conditions, 6 species; no condition above +2.5&nbsp;°C. Two independent matrix definitions (MitoCarta 3.0, GO).</li>
+<li>Uncertainty from a two-level bootstrap (gene clusters shared across all datasets and species, plus conditions). Calibration uncertainty propagated by species bootstrap. Censoring-aware rank test treating non-melters as most stable: P(matrix &gt; cytosol) = 0.53.</li>
+<li>Non-human labels via strict one-to-one orthologs; paralog pairs hand-curated with localisation checks.</li>
+<li>Adversarial review by an independent AI model (OpenAI Codex). It found real errors (orthology, replicate pooling, CI construction, invalid pairs) and conceptual over-claims. All were fixed, and the headline was narrowed accordingly.</li>
+<li>The analysis was carried out with AI assistance (Anthropic's Claude). All code, inputs and intermediate outputs are available for inspection.</li>
+</ul>
+
+<h2>Limitations</h2>
+<ul>
+<li>TPP Tm measures 3-min aggregation, not equilibrium unfolding. It is, however, the same measure used for the calibration.</li>
+<li>Intact-cell Tm is recorded in dish-temperature coordinates. If mitochondria were hot during heating, intact-cell values would be biased; hence our main inference rests on lysates, paralogs and sequence.</li>
+<li>Fly data are lysate-only; no bird or warm-bodied-fish meltome yet exists for a within-animal positive control.</li>
+</ul>
+
+<h2>Key references</h2>
+<p class="small">Chrétien D et al. (2018) PLoS Biol 16:e2003992 · Terzioglu M et al. (2023) eLife 12:RP89232 · Jarzab A et al. (2020) Nat Methods 17:495 · Jacobs HT et al. (2024) FEBS J · Rath S et al. (2021) MitoCarta3.0, NAR 49:D1541 · Pudžiuvelytė I et al. (2024) TemStaPro, Bioinformatics · Treberg JR &amp; Mailloux RJ (2026) Acta Physiol · Fahimi P et al. (2026) BioEssays · Baffou G et al. (2014) Nat Methods 11:899 · Lane N (2018) PLoS Biol 16:e2005113 · Savitski MM et al. (2014) Science 346:1255784 · Takarada M et al. (2026) Nat Commun 17:4215 · Rivera-Mejías P et al. (2024) bioRxiv 10.1101/2024.02.27.582308 · Tkachenko A et al. (2026) Research Square 10.21203/rs.3.rs-8744427/v1.</p>
+
+<div class="pb"></div>
+<h2>Proposed decisive experiment</h2>
+<p><b>Design.</b> Thermal proteome profiling in intact cells in two states: <b>respiring</b> vs <b>respiration blocked</b>, the latter in two forms: antimycin A alone (membrane potential maintained by ATP-synthase reversal on glycolytic ATP; to be confirmed by TMRM) and antimycin A + oligomycin (potential collapses). Optional third arm: uncoupled (FCCP), which by the hypothesis's logic should be hotter still (UCP1 uncoupling increased the MTY "temperature" in Chrétien 2018). Cells: HEK293 or K562 (human), plus <i>Drosophila</i> S2. Standard 10-temperature TPP (37–67&nbsp;°C), TMTpro or label-free DIA, 2 biological replicates.</p>
+<p><b>Logic.</b> TPP records the <i>dish</i> temperature at which each protein aggregates. If respiring mitochondria are 10&nbsp;°C hotter than the dish, matrix proteins reach their true Tm at a dish temperature ~10&nbsp;°C lower. Blocking respiration removes the excess, so <b>matrix proteins (only) should appear ~5–10&nbsp;°C more stable</b>. Cytosolic proteins, at dish temperature in both states, serve as the internal control. If mitochondria are not hot, matrix and cytosolic proteins shift by the same small amount (&lt;1–2&nbsp;°C). The two outcomes differ by an order of magnitude more than TPP precision (~0.5&nbsp;°C).</p>
+<table>
+<tr><th>Outcome</th><th>Matrix ΔTm (off − on)</th><th>Cytosol ΔTm</th><th>Interpretation</th></tr>
+<tr><td>Hot mitochondria</td><td class="n">+5 to +10&nbsp;°C</td><td class="n">≈ 0</td><td>Steady hot matrix confirmed, plus a large unknown protective mechanism to explain the lysate data</td></tr>
+<tr><td>Not hot</td><td class="n">≈ cytosol (&lt;1–2&nbsp;°C)</td><td class="n">≈ 0</td><td>Steady +10&nbsp;°C matrix ruled out; probe signals have non-thermal components</td></tr>
+<tr><td>FCCP arm (if hot)</td><td class="n">more negative than "on"</td><td class="n">≈ 0</td><td>Direction check: the effect should reverse sign</td></tr>
+</table>
+<p><b>Essential controls.</b> Respirometry (Seahorse/Oroboros) confirming respiration is blocked and that ATP and viability are maintained over the ~1&nbsp;h treatment. Membrane-potential readout (TMRM). Ligand-sensitive proteins whose Tm shifts with ATP/NADH flagged and analysed separately, since inhibitors change metabolite levels; the test statistic is the matrix-specific shift <i>relative to</i> cytosolic proteins with similar ligand sensitivity. Mitochondrial dysfunction can shift mitochondrial protein Tm non-thermally (Groh et&nbsp;al. 2023), so we also require the heat-only signature: a near-uniform shift across all matrix protein classes, plus a parallel lysate control. Loss of membrane potential itself destabilises matrix proteins (antimycin on isolated mitochondria: 299 of 893 proteins destabilised, mostly matrix; Rivera-Mejías et&nbsp;al. 2024). That effect runs <i>opposite</i> to the hot-matrix prediction, so the two "off" arms are compared to separate heat from membrane potential.</p>
+<p><b>Scale.</b> ~1–2 weeks of bench work for a lab running TPP. Roughly 60 MS runs (3 states × 2 replicates × 10 temperatures) per cell line. Indicative cost for a label-free pilot in India ≈ ₹3&nbsp;lakh (~US$3.5k); a full TMT design ≈ ₹10–13&nbsp;lakh (~US$12–15k).</p>
+
+<h2>What we are looking for</h2>
+<ul>
+<li><b>A TPP lab</b> to run (or co-design) the experiment; with co-authorship. We are open to discussing support for consumables and MS time.</li>
+<li><b>Mitochondrial physiologists</b>, on either side of the debate, to sanity-check design and controls before data are collected. Pre-registering predictions jointly would make the result persuasive whichever way it falls.</li>
+<li><b>Critical reading</b> of the reanalysis itself. We'd value being told where it is wrong.</li>
+</ul>
+
+<h2>What we can send</h2>
+<ol>
+<li>Full technical report (methods, all numbers, verification ladder, review log): ~10 pages.</li>
+<li>Code and intermediate results: Python scripts reproducing every number from public data (Meltome Atlas, MitoCarta 3.0, UniProt, Alliance orthology, TemStaPro).</li>
+<li>A draft experimental protocol for the respiration on/off TPP with predictions written down in advance.</li>
+</ol>
+
+</body></html>

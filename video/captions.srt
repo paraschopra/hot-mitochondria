@@ -1,0 +1,56 @@
+1
+00:00:00,300 --> 00:00:02,800
+Mitochondria are the tiny power plants inside our cells.
+
+2
+00:00:02,800 --> 00:00:05,400
+Some scientists think they run at about 50 °C,
+
+3
+00:00:05,400 --> 00:00:08,000
+more than 10 degrees hotter than the rest of the cell.
+
+4
+00:00:08,000 --> 00:00:12,500
+Living things from hotter places build proteins that hold up to more heat.
+
+5
+00:00:12,500 --> 00:00:17,000
+Across 13 species, from icy seas to hot springs, the pattern holds.
+
+6
+00:00:17,000 --> 00:00:21,500
+So proteins working inside hot power plants should be built much tougher.
+
+7
+00:00:21,500 --> 00:00:25,500
+We checked public data: over 100,000 measurements, 6 species, 4 labs.
+
+8
+00:00:25,500 --> 00:00:30,000
+They're not tougher. They hold up about the same as the rest of the cell.
+
+9
+00:00:30,000 --> 00:00:32,600
+Two more checks agreed:
+
+10
+00:00:32,600 --> 00:00:37,000
+matched “sister” proteins, and an AI that reads heat-toughness from a protein's recipe.
+
+11
+00:00:37,000 --> 00:00:42,000
+Another possibility: maybe the whole cell gets just as hot, so all its proteins had to toughen up.
+
+12
+00:00:42,000 --> 00:00:48,000
+That seems unlikely. The few measurements so far show the rest of the cell warming only 1–2 degrees.
+
+13
+00:00:48,000 --> 00:00:53,500
+One simple lab test could settle it: switch the power plants off and see if their proteins suddenly look tougher.
+
+14
+00:00:53,500 --> 00:00:57,600
+Summary and code: link in the post.
+

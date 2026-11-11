@@ -1,0 +1,49 @@
+A. Calibration (lysate, NP40):
+                          Organism  OGT  medTm      n
+0             Arabidopsis thaliana   25  45.18   2493
+1                Bacillus subtilis   30  44.01   1563
+2           Caenorhabditis elegans   20  41.16   3366
+3                      Danio rerio   28  50.90   3595
+4          Drosophila melanogaster   28  42.94   1689
+5                 Escherichia coli   37  49.69   2965
+6   Geobacillus stearothermophilus   55  70.27    776
+7                     Homo sapiens   37  51.67  30531
+8                     Mus musculus   37  50.02  13710
+9             Oleispira antarctica   15  41.79   1352
+10            Picrophilus torridus   60  71.56    908
+11        Saccharomyces cerevisiae   30  49.50   1949
+12            Thermus thermophilus   70  84.66    904
+  all species: slope=0.811 ± 0.065 °C Tm per °C OGT, r=0.967
+  eukaryotes : slope=0.542 ± 0.184, r=0.796
+
+B. Matrix vs cytosolic Tm per condition (replicates averaged):
+                                                   cond  n_matrix  n_cyto  med_matrix  med_cyto  d_matrix  ci_lo  ci_hi     se  d_allmito  d_lenadj  frac_matrix_below50  frac_cyto_below50      p
+0            Caenorhabditis elegans|N2|lysate|0.5% NP40       249     719      39.180    40.890    -1.710 -2.120 -0.960  0.298     -1.620    -1.472                0.960              0.947  0.000
+1              Danio rerio|Zendo cells|lysate|0.5% NP40       170     691      50.580    50.790    -0.210 -0.705  0.371  0.274     -0.220    -0.720                0.400              0.381  0.451
+2    Drosophila melanogaster|SII cells|lysate|0.5% NP40        87     666      42.550    43.030    -0.480 -1.460  0.535  0.456     -0.820    -0.817                0.989              0.965  0.219
+3                          Homo sapiens|A549|lysate|PBS       326    2359      52.205    53.910    -1.705 -2.463 -1.080  0.334     -1.247    -1.787                0.316              0.164  0.000
+4                          Homo sapiens|HAOEC|cells|PBS       309    2006      49.990    49.195     0.795  0.510  1.030  0.139      1.227     0.497                0.502              0.653  0.000
+5                        Homo sapiens|HEK293T|cells|PBS       317    2244      49.990    48.825     1.165  0.825  1.380  0.140      1.680     0.635                0.502              0.696  0.000
+6                   Homo sapiens|HEK293|cells|0.5% NP40       310    1966      54.560    53.685     0.875  0.420  1.540  0.286      1.560     0.669                0.032              0.069  0.000
+7                           Homo sapiens|HL60|cells|PBS       326    2350      49.785    48.672     1.112  0.955  1.343  0.100      1.663     0.695                0.555              0.720  0.000
+8                          Homo sapiens|HaCaT|cells|PBS       265    1755      50.575    48.620     1.955  1.350  2.340  0.253      2.182     1.617                0.434              0.666  0.000
+9                          Homo sapiens|HepG2|cells|PBS       397    2625      49.805    48.410     1.395  1.067  1.687  0.153      1.985     0.828                0.539              0.709  0.000
+10                        Homo sapiens|Jurkat|cells|PBS       357    2603      50.130    48.550     1.580  1.203  1.891  0.172      1.975     0.854                0.482              0.689  0.000
+11                 Homo sapiens|Jurkat|lysate|0.5% NP40       388    2626      52.048    50.688     1.360  1.007  1.955  0.231      2.750     1.303                0.258              0.428  0.000
+12                    Homo sapiens|K562|cells|0.5% NP40       397    2295      52.150    50.600     1.550  0.800  2.190  0.374      2.335     1.078                0.297              0.444  0.000
+13                          Homo sapiens|K562|cells|PBS       608    4416      51.353    50.516     0.837  0.374  1.176  0.198      0.844     0.190                0.363              0.443  0.001
+14                   Homo sapiens|K562|lysate|0.5% NP40       354    2107      48.725    48.930    -0.205 -0.780  0.200  0.268     -0.445    -0.584                0.641              0.633  0.050
+15                         Homo sapiens|K562|lysate|PBS       365    2551      50.810    49.005     1.805  1.275  2.315  0.276      1.740     1.136                0.405              0.608  0.000
+16                          Homo sapiens|U937|cells|PBS       331    2367      50.025    49.015     1.010  0.820  1.245  0.112      1.435     0.822                0.489              0.686  0.000
+17  Homo sapiens|colon cancer spheroids|cells|0.5% NP40       382    2241      52.612    51.230     1.382  0.608  2.025  0.436      2.040     1.142                0.233              0.375  0.000
+18                  Homo sapiens|hepatocytes|lysate|PBS       409    1816      52.045    53.930    -1.885 -2.305 -1.235  0.264     -1.700    -1.806                0.306              0.101  0.000
+19       Homo sapiens|lung fibroblasts|lysate|0.5% NP40       300    1643      55.262    54.635     0.628 -0.245  1.400  0.415      1.645     0.432                0.130              0.154  0.098
+20                Homo sapiens|primary Tcells|cells|PBS       233    1452      50.990    49.448     1.542  1.082  1.850  0.200      1.582     1.110                0.313              0.603  0.000
+21                   Mus musculus|BMDC|lysate|0.5% NP40       400    1764      49.082    49.713    -0.630 -1.230 -0.025  0.293      0.417    -1.300                0.572              0.539  0.000
+22           Mus musculus|liver tissue|lysate|0.5% NP40       262     831      52.420    52.000     0.420 -2.040  1.260  0.953     -1.430    -0.685                0.427              0.365  0.166
+23     Saccharomyces cerevisiae|BY4741|lysate|0.5% NP40       177     725      49.620    48.770     0.850 -0.050  1.640  0.422      0.970     0.614                0.531              0.619  0.029
+  pooled [all conditions] k=24: dTm=0.58 °C (95% CI 0.22..0.94), tau=0.85; implied ΔT=0.7 °C (upper 1.2); max single-condition dTm=1.95 -> ΔT=2.4
+  pooled [lysates] k=12: dTm=-0.16 °C (95% CI -0.93..0.61), tau=1.30; implied ΔT=-0.2 °C (upper 0.7); max single-condition dTm=1.81 -> ΔT=2.2
+  pooled [intact cells] k=12: dTm=1.23 °C (95% CI 1.05..1.41), tau=0.25; implied ΔT=1.5 °C (upper 1.7); max single-condition dTm=1.95 -> ΔT=2.4
+  pooled [human] k=18: dTm=0.86 °C (95% CI 0.50..1.21), tau=0.72; implied ΔT=1.1 °C (upper 1.5); max single-condition dTm=1.95 -> ΔT=2.4
+  pooled [non-mammal eukaryotes] k=4: dTm=-0.41 °C (95% CI -1.45..0.63), tau=1.00; implied ΔT=-0.5 °C (upper 0.8); max single-condition dTm=0.85 -> ΔT=1.0

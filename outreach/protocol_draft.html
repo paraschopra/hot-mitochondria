@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Respiration on/off TPP protocol</title>
+<style>
+@page{size:A4;margin:16mm}
+body{font:10pt/1.42 Charter,"Iowan Old Style",Georgia,serif;color:#151513;margin:0}
+h1{font:700 17pt/1.2 ui-sans-serif,system-ui,-apple-system,sans-serif;margin:0 0 4px}
+h2{font:700 11.5pt/1.25 ui-sans-serif,system-ui,sans-serif;margin:14px 0 5px;border-bottom:1px solid #ddd9cf;padding-bottom:3px}
+.meta{font:8.8pt/1.4 ui-sans-serif,system-ui,sans-serif;color:#7d7b74;margin-bottom:8px}
+.box{border-left:3px solid #2a78d6;background:#f2f7fd;padding:7px 11px;margin:7px 0}
+.warn{border-left-color:#c4501f;background:#fbf0ea}
+table{border-collapse:collapse;width:100%;font:8.8pt/1.35 ui-sans-serif,system-ui,sans-serif;margin:6px 0}
+th,td{border-bottom:1px solid #e4e1d8;padding:4px 6px;text-align:left;vertical-align:top}
+th{background:#f6f4ee;font-weight:600}
+ul,ol{margin:4px 0 4px 18px;padding:0} li{margin:2px 0}
+.small{font-size:8.8pt;color:#4d4c47}
+</style></head><body>
+<h1>Draft protocol: is the mitochondrial matrix hotter than the cytosol?<br><span style="font-weight:400;font-size:12pt;color:#4d4c47">Thermal proteome profiling of intact cells with respiration on vs off</span></h1>
+<div class="meta">Paras Chopra · paras@paraschopra.com · Draft v0.2, October 2026 · For discussion with experimental collaborators. Concentrations and timings are starting points to be optimised by the lab running it.</div>
+
+<div class="box"><b>Principle.</b> TPP records the <i>bath</i> temperature at which each protein aggregates. If respiring mitochondria run ΔT hotter than the bath, matrix proteins reach their true melting point at a bath temperature ΔT lower. Blocking respiration removes ΔT, so matrix proteins (and only matrix proteins) should shift to an apparently higher Tm. Cytosolic proteins are at bath temperature in both states and serve as the internal reference.</div>
+
+<h2>1. Pre-registered predictions (to be agreed and time-stamped before data collection)</h2>
+<p>Primary statistic: <b>Δ<sub>M−C</sub></b> = median over matrix proteins of [Tm(off) − Tm(on)] minus the same median over cytosolic reference proteins. Matrix = MitoCarta 3.0 "Matrix"; cytosol = cytosol/nucleus-annotated, non-mitochondrial, non-secretory proteins (same definitions as the reanalysis).</p>
+<table>
+<tr><th>Hypothesis</th><th>Predicted Δ<sub>M−C</sub> (off − on)</th><th>FCCP arm, matrix − cytosol (FCCP − on)</th></tr>
+<tr><td>Hot matrix, steady state (+10–15&nbsp;°C)</td><td><b>≥ +4&nbsp;°C</b> (expected +5 to +10)</td><td>&lt; 0 (hotter still)</td></tr>
+<tr><td>No meaningful excess</td><td><b>|Δ| ≤ 1.5&nbsp;°C</b></td><td>≈ 0</td></tr>
+<tr><td>Inconclusive</td><td>1.5 to 4&nbsp;°C</td><td>—</td></tr>
+</table>
+<p class="small">The primary contrast uses the OFF-ψ arm (antimycin alone), because it removes heat without collapsing membrane potential; the OFF arm (antimycin + oligomycin) is the secondary contrast. Secondary: the same statistic for inner-membrane/OXPHOS proteins (closest to the putative heat source; largest predicted shift) and for the outer membrane and intermembrane space (smaller predicted shift). Under hot mitochondria a gradient matrix ≈ IMM &gt; IMS &gt; OMM ≈ cytosol is expected.</p>
+
+<h2>2. Cells and treatments</h2>
+<ul>
+<li><b>Cell lines:</b> HEK293 (the line used by Chrétien 2018 and Terzioglu 2023). Optional: K562 (has public intact-cell TPP baselines), <i>Drosophila</i> S2 (insect claim; heat at 25&nbsp;°C baseline with temperature range shifted down accordingly).</li>
+<li><b>Medium:</b> high-glucose (25&nbsp;mM) medium so glycolysis maintains ATP when respiration is blocked.</li>
+<li><b>Arms</b>, each ~45&nbsp;min pre-treatment at 37&nbsp;°C, drugs kept present through heating:
+ <ol>
+ <li>ON: vehicle (DMSO matched)</li>
+ <li>OFF-ψ: antimycin A alone (~1&nbsp;µM). Respiration stops, but in high glucose the ATP synthase runs in reverse on glycolytic ATP and keeps the membrane potential up (confirm by TMRM). <b>Heat off, potential kept.</b></li>
+ <li>OFF: antimycin A (~1&nbsp;µM) + oligomycin A (~1–2&nbsp;µM); optionally + rotenone (~0.5&nbsp;µM). <b>Heat off, potential lost.</b></li>
+ <li>Optional UNCOUPLED: FCCP, titrated to maximal respiration (typically 0.25–2&nbsp;µM)</li>
+ </ol></li>
+<li><b>Replicates:</b> 2 biological replicates per arm (3 preferred), independent cultures and days.</li>
+</ul>
+
+<h2>3. Mandatory side-measurements (same cultures, same day)</h2>
+<ul>
+<li><b>Respirometry</b> (Seahorse XF or Oroboros): confirm OFF abolishes oxygen consumption, FCCP maximises it.</li>
+<li><b>ATP level</b> (luminescence) and <b>viability</b> after the treatment window. Requirement: ATP within ~70% of control in OFF. If not, extend glucose or shorten treatment, since ATP-binding proteins shift Tm with ATP.</li>
+<li><b>Membrane potential</b> (TMRM, non-quench mode) to document the state of each arm. Required outcome: OFF-ψ retains most of the control potential; OFF loses it.</li>
+<li>Optional: MTY or gTEMP readout on the same cells, so the probe signal and the proteome answer can be compared directly.</li>
+</ul>
+
+<h2>4. TPP (standard intact-cell protocol, Savitski et&nbsp;al. 2014; Mateus et&nbsp;al. 2020)</h2>
+<ol>
+<li>Harvest treated cells quickly (keep drugs in the buffer), resuspend in PBS + drug, aliquot equal cell numbers into 10 PCR tubes.</li>
+<li>Heat each aliquot for <b>3&nbsp;min</b> at one of 10 temperatures (e.g. 37.0, 40.4, 44.0, 46.9, 49.8, 52.9, 55.5, 58.6, 62.0, 66.3&nbsp;°C) in a gradient thermocycler; 3&nbsp;min at room temperature.</li>
+<li>Lyse (PBS + 0.4% NP-40 + protease inhibitors, freeze–thaw ×3); remove aggregates by ultracentrifugation (100,000&nbsp;×&nbsp;g, 20&nbsp;min, 4&nbsp;°C) or filter plate.</li>
+<li>Digest the soluble fraction; label with TMTpro (one temperature series per 10–16 channels; all arms of a replicate in the same TMT set where possible). Alternative: label-free DIA, one run per temperature × arm × replicate.</li>
+<li>LC-MS/MS on an Orbitrap-class instrument; fractionate TMT sets (8–12 fractions) for depth. Target ≥ 5,000 proteins, ≥ 300 matrix proteins.</li>
+<li><b>Parallel lysate control</b> (strongly recommended): heat <i>lysate</i> from ON and OFF cells. Here mitochondria cannot be hot, so Δ<sub>M−C</sub> should be ~0 in both. This separates temperature effects from drug-induced ligand/binding changes.</li>
+</ol>
+
+<h2>5. Analysis plan</h2>
+<ul>
+<li>Fit sigmoid melting curves per protein (TPP-R / NPARC), derive Tm. Keep proteins with good fits (R² &gt; 0.8, plateau &lt; 0.3) in all arms.</li>
+<li>Compute Δ<sub>M−C</sub> with a protein-bootstrap 95% CI. Report per replicate and pooled.</li>
+<li><b>Ligand confound check:</b> repeat after excluding proteins annotated as ATP/ADP-, NAD(H)-, FAD- or CoA-binding (GO), and after subtracting each protein's shift in the lysate control. The hot-mitochondria signal must survive both.</li>
+<li><b>Heat-only signature:</b> under a thermal offset, the off−on shift should be similar across matrix protein classes (TCA, mitoribosome, nucleoid, chaperones) and independent of protein abundance. A shift confined to OXPHOS assembly or newly synthesised proteins points to proteostasis, not temperature.</li>
+<li><b>Intact-vs-lysate double difference:</b> [Δ<sub>M−C</sub> intact] − [Δ<sub>M−C</sub> lysate] isolates the part that requires intact, energised mitochondria.</li>
+<li>All code (reanalysis pipeline) is shared and will be extended to these data before unblinding the arm labels, if the lab is willing to blind sample identities.</li>
+</ul>
+
+<h2>6. Pitfalls and how the design handles them</h2>
+<table>
+<tr><th>Pitfall</th><th>Mitigation</th></tr>
+<tr><td>Mitochondrial dysfunction itself shifts mitochondrial protein Tm, with no temperature change (Groh et al. 2023, Life Sci Alliance 6:e202201805: import block in yeast destabilised OXPHOS subunits and Hsp60, especially newly made pools)</td><td>Short treatment; lysate control; and the <b>heat-only signature</b>: a thermal offset shifts the whole matrix Tm distribution by a near-constant number of degrees (similar shift across functional classes, abundance and Tm ranges), whereas proteostasis effects are subset-specific (new/assembling proteins, particular complexes). Test homogeneity of shifts across matrix protein classes.</td></tr>
+<tr><td>Loss of membrane potential destabilises matrix proteins with no temperature change: antimycin on isolated mitochondria destabilised 299 of 893 proteins, mostly in the matrix, attributed to loss of membrane potential (Rivera-Mejías et al. 2024). This runs <i>opposite</i> to the hot-matrix prediction and could cancel it.</td><td>Two OFF arms: antimycin alone (potential kept by ATP-synthase reversal) vs antimycin + oligomycin (potential lost). Heat removal predicts stabilisation in both; a membrane-potential effect predicts destabilisation in the second only. TMRM documents the potential in every arm.</td></tr>
+<tr><td>Inhibitors change metabolite levels, shifting Tm of ligand-binding proteins</td><td>Lysate control; ligand-annotated exclusion; glucose-maintained ATP; cytosolic ATP-binding proteins as a comparison set</td></tr>
+<tr><td>Respiration fails during heating, so the hot excess (if any) shrinks at high temperatures</td><td>Predicted shift stated as ≥ +4&nbsp;°C rather than the full ΔT; the shift should be largest for proteins with Tm in the lower temperature range, which is checked explicitly</td></tr>
+<tr><td>Mitochondrial proteins aggregate differently once membranes are damaged by heat</td><td>The same occurs in all arms; only the difference between arms is interpreted</td></tr>
+<tr><td>Cell death or mitophagy during treatment</td><td>Short (≤ 1&nbsp;h) window; viability and ATP documented</td></tr>
+</table>
+
+<h2>7. Scale, time and indicative cost</h2>
+<p>Per cell line: 3 arms (ON, OFF-ψ, OFF) × 2 replicates × 10 temperatures = 60 samples (+20 for the FCCP arm; +60 for the lysate control). Bench work ~1–2 weeks; MS time ~1–2 weeks. Indicative costs in India: label-free DIA pilot (2 arms × 1 replicate) ≈ ₹3&nbsp;lakh; full TMT design ≈ ₹10–13&nbsp;lakh (reagent-dominated). Drugs ≈ ₹70k.</p>
+<p class="small">References: Savitski MM et al. (2014) Science 346:1255784 · Mateus A et al. (2020) Mol Syst Biol 16:e9232 · Jarzab A et al. (2020) Nat Methods 17:495 · Chrétien D et al. (2018) PLoS Biol 16:e2003992 · Terzioglu M et al. (2023) eLife 12:RP89232 · Childs D et al. (2019) Mol Cell Proteomics (NPARC) · Groh C et al. (2023) Life Sci Alliance 6:e202201805 · Rivera-Mejías P et al. (2024) bioRxiv 10.1101/2024.02.27.582308 · Fahimi P, Lynch M, Matta CF (2026) BioEssays 48:e70159 · Takarada M et al. (2026) Nat Commun 17:4215.</p>
+</body></html>
