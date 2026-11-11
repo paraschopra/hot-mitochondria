@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hot mitochondria: a proteome test</title>
 <style>
 @page{size:A4;margin:16mm 16mm 16mm 16mm}
@@ -19,12 +20,43 @@ img{width:100%;border:1px solid #e4e1d8;margin:6px 0 2px}
 ul,ol{margin:4px 0 4px 18px;padding:0} li{margin:2px 0}
 .pb{page-break-before:always}
 .small{font-size:9pt;color:#4d4c47}
+.screen-only{display:none}
+@media screen{
+  html{background:#f4f2ec}
+  body{font-size:17px;line-height:1.62;max-width:780px;margin:40px auto 80px;padding:48px 56px 56px;background:#fffefb;
+    border:1px solid #e6e2d8;border-radius:14px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 30px rgba(0,0,0,.05)}
+  .screen-only{display:flex}
+  .linkbar{gap:8px;flex-wrap:wrap;margin:0 0 26px;font:600 13.5px/1 ui-sans-serif,system-ui,-apple-system,sans-serif}
+  .linkbar a{color:#1f5fae;background:#eef4fc;border:1px solid #d6e4f6;border-radius:999px;padding:8px 14px;text-decoration:none}
+  .linkbar a:hover{background:#e1ecfa}
+  h1{font-size:32px;line-height:1.15;letter-spacing:-.01em;margin:0 0 12px}
+  h2{font-size:21px;margin:44px 0 12px;padding-bottom:8px}
+  .sub{font-size:18.5px;line-height:1.45;margin-bottom:12px}
+  .meta{font-size:14px;line-height:1.55;margin-bottom:22px}
+  a{color:#1f5fae}
+  p{margin:12px 0}
+  .box{padding:16px 20px;margin:18px 0;border-radius:0 10px 10px 0}
+  table{font-size:14.5px;margin:14px 0;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  th,td{padding:9px 10px}
+  th{font-size:13px;color:#4d4c47}
+  .small{font-size:14px;line-height:1.5}
+  img{border-radius:10px;margin:24px auto 8px!important;width:100%!important;background:#fff}
+  .cap{font-size:14px;line-height:1.5;margin-bottom:8px}
+  ul,ol{margin:10px 0 10px 24px} li{margin:7px 0}
+}
+@media screen and (max-width:720px){
+  html{background:#fffefb}
+  body{margin:0;padding:28px 16px 56px;border:0;border-radius:0;box-shadow:none;font-size:16.5px}
+  h1{font-size:25px} h2{font-size:19px;margin-top:36px} .sub{font-size:16.5px}
+  table{font-size:13.5px}
+}
 </style></head><body>
 
 <h1>Mitochondrial matrix proteins carry no signature of a 50&nbsp;°C environment</h1>
 <div class="sub">A probe-independent test of the "hot mitochondria" hypothesis using public thermal-proteome data, and a proposed one-experiment resolution</div>
 <div class="meta">Paras Chopra · paras@paraschopra.com · Bangalore, India · October 2026 · Executive summary (4 pages). Full technical report, code and intermediate results: <a href="https://github.com/paraschopra/hot-mitochondria">github.com/paraschopra/hot-mitochondria</a>.</div>
 
+<div class="screen-only linkbar"><a href="executive_summary.pdf">PDF (4 pages)</a><a href="technical_report.pdf">Full technical report</a><a href="protocol_draft.pdf">Proposed experiment</a><a href="https://github.com/paraschopra/hot-mitochondria">Code &amp; data on GitHub</a></div>
 <div class="box"><b>In one paragraph.</b> Chrétien et&nbsp;al. (2018) and Terzioglu et&nbsp;al. (2023) reported that the mitochondrial matrix sits at ~50&nbsp;°C, 10–15&nbsp;°C above the cytosol, as a steady state. Across 13 species, median proteome melting temperature (Tm) rises ~0.55–0.81&nbsp;°C per °C of growth temperature. A matrix that is permanently 10–15&nbsp;°C hotter should therefore have proteins melting ~5–12&nbsp;°C above their cytosolic neighbours. Reanalysing the Meltome Atlas (62 datasets, 4 labs, 6 eukaryotic species, 126,176 Tm measurements), we find matrix − cytosol ΔTm = <b>−0.17&nbsp;°C</b> in lysates (intrinsic stability; 95% CI −1.00 to +0.58) and <b>+1.26&nbsp;°C</b> in intact cells (+0.72 to +1.77). Same-family mitochondrial/cytosolic paralog pairs show no difference. A protein-language-model thermostability predictor shows no heat-adaptation signature in any of five species. A persistently hot matrix is compatible with these data only if an unobserved, matrix-specific, non-intrinsic stabilisation worth ~5–12&nbsp;°C exists. We propose a single TPP experiment (respiration on vs off in intact cells) that would decide between the two pictures.</div>
 
 <h2>Why this question</h2>
@@ -103,11 +135,12 @@ ul,ol{margin:4px 0 4px 18px;padding:0} li{margin:2px 0}
 <li><b>Critical reading</b> of the reanalysis itself. We'd value being told where it is wrong.</li>
 </ul>
 
-<h2>What we can send</h2>
+<h2>Further material</h2>
+<p>All at <a href="https://github.com/paraschopra/hot-mitochondria">github.com/paraschopra/hot-mitochondria</a>:</p>
 <ol>
-<li>Full technical report (methods, all numbers, verification ladder, review log): ~10 pages.</li>
+<li><a href="https://github.com/paraschopra/hot-mitochondria/blob/main/outreach/technical_report.pdf">Full technical report</a> (methods, all numbers, verification ladder, review log): ~10 pages.</li>
 <li>Code and intermediate results: Python scripts reproducing every number from public data (Meltome Atlas, MitoCarta 3.0, UniProt, Alliance orthology, TemStaPro).</li>
-<li>A draft experimental protocol for the respiration on/off TPP with predictions written down in advance.</li>
+<li>A <a href="https://github.com/paraschopra/hot-mitochondria/blob/main/outreach/protocol_draft.pdf">draft experimental protocol</a> for the respiration on/off TPP with predictions written down in advance.</li>
 </ol>
 
 </body></html>
