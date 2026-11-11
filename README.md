@@ -18,7 +18,7 @@ This is a computational reanalysis of public data, not a new lab measurement. It
 - **Executive summary (4 pages):** [HTML](https://paraschopra.github.io/hot-mitochondria/outreach/executive_summary.html) · [PDF](outreach/executive_summary.pdf)
 - **Full technical report:** [REPORT.md](REPORT.md) · [PDF](outreach/technical_report.pdf)
 - **Proposed experiment:** [protocol draft (PDF)](outreach/protocol_draft.pdf)
-- **58-second explainer video:** [video/hot_mitochondria.mp4](video/hot_mitochondria.mp4) (captions in [video/captions.srt](video/captions.srt))
+- **Under-a-minute explainer video:** [video/hot_mitochondria.mp4](video/hot_mitochondria.mp4) (captions in [video/captions.srt](video/captions.srt))
 
 ![Main figure](figures/fig1_main.png)
 

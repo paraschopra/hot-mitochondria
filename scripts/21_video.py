@@ -1,12 +1,13 @@
-"""Plain-language explainer video (~58 s, 1080x1080, burned-in captions, original score from 20_score.py).
+"""Plain-language explainer video (~59.5 s, 1080x1080, burned-in captions, original score from 20_score.py).
 
 Scenes (seconds):
   0-8    hook: mitochondria are the cell's power plants; claimed ~50 °C, >10° hotter than the rest of the cell
-  8-17   proteins record heat: 13 species, living temperature vs heat their proteins can take (real Meltome medians)
-  17-30  the test: expected 5-12° tougher vs found ~0-1° (pooled lysate / intact-cell estimates and their CIs)
-  30-37  two more checks: same-family "sister" proteins, AI sequence reader
-  37-48  alternative: the whole cell is just as hot? needs ~47-51 °C; published cytosol readings rise 1-2 °C
-  48-58  one experiment would settle it; end card
+  8-16.5 proteins record heat: 13 species, living temperature vs heat their proteins can take (real Meltome medians)
+  16.5-29 the test: expected 5-12° tougher vs found ~0-1° (pooled lysate / intact-cell estimates and their CIs)
+  29-35.5 two more checks: same-family "sister" proteins, AI sequence reader
+  35.5-46 alternative: the whole cell is just as hot? needs ~47-51 °C; published cytosol readings rise 1-2 °C
+  46-56  the deciding experiment: heat cells with power plants on vs off; off should survive 5-10° more if hot
+  56-59.5 end card
 
 Writes video/hot_mitochondria.mp4 (+ video/captions.srt). Usage: python scripts/21_video.py [WORKERS]
 """
@@ -31,7 +32,7 @@ OUT = ROOT / "video"
 W = H = 1080
 DPI = 100
 FPS = 30
-DURATION = 58.0
+DURATION = 59.5
 REPO_URL = "github.com/paraschopra/hot-mitochondria"
 
 BG, FG, DIM, FAINT = "#0f1216", "#f3efe7", "#9aa1ab", "#2a3038"
@@ -51,17 +52,18 @@ CAPTIONS = [
     (0.3, 2.8, "Mitochondria are the tiny power plants inside our cells."),
     (2.8, 5.4, "Some scientists think they run at about 50 °C,"),
     (5.4, 8.0, "more than 10 degrees hotter than the rest of the cell."),
-    (8.0, 12.5, "Living things from hotter places build proteins that hold up to more heat."),
-    (12.5, 17.0, "Across 13 species, from icy seas to hot springs, the pattern holds."),
-    (17.0, 21.5, "So proteins working inside hot power plants should be built much tougher."),
-    (21.5, 25.5, "We checked public data: over 100,000 measurements, 6 species, 4 labs."),
-    (25.5, 30.0, "They're not tougher. They hold up about the same as the rest of the cell."),
-    (30.0, 32.6, "Two more checks agreed:"),
-    (32.6, 37.0, "matched “sister” proteins, and an AI that reads heat-toughness from a protein's recipe."),
-    (37.0, 42.0, "Another possibility: maybe the whole cell gets just as hot, so all its proteins had to toughen up."),
-    (42.0, 48.0, "That seems unlikely. The few measurements so far show the rest of the cell warming only 1–2 degrees."),
-    (48.0, 53.5, "One simple lab test could settle it: switch the power plants off and see if their proteins suddenly look tougher."),
-    (53.5, 57.6, "Summary and code: link in the post."),
+    (8.0, 12.3, "Living things from hotter places build proteins that hold up to more heat."),
+    (12.3, 16.5, "Across 13 species, from icy seas to hot springs, the pattern holds."),
+    (16.5, 20.8, "So proteins working inside hot power plants should be built much tougher."),
+    (20.8, 24.8, "We checked public data: over 100,000 measurements, 6 species, 4 labs."),
+    (24.8, 29.0, "They're not tougher. They hold up about the same as the rest of the cell."),
+    (29.0, 31.3, "Two more checks agreed:"),
+    (31.3, 35.5, "matched \u201csister\u201d proteins, and an AI that reads heat-toughness from a protein's recipe."),
+    (35.5, 40.3, "Another possibility: maybe the whole cell gets just as hot, so all its proteins had to toughen up."),
+    (40.3, 46.0, "That seems unlikely. The few measurements so far show the rest of the cell warming only 1\u20132 degrees."),
+    (46.0, 50.5, "To settle it: heat cells in a dish and see when their proteins fall apart, with the power plants on, then off."),
+    (50.5, 56.0, "If the power plants really run hot, switching them off should let their proteins take 5\u201310° more heat."),
+    (56.0, 59.2, "Summary and code: link in the post."),
 ]
 
 
@@ -184,7 +186,7 @@ def scene_species(ax, t, a):
 
 
 def scene_test(ax, t, a):
-    t0 = 17.0
+    t0 = 16.5
     txt(ax, 0.5, 0.92, "How much tougher are power-plant proteins?", 27, FG, a, "bold")
     lo, hi = -3, 14
     x0, x1, yl = 0.10, 0.90, 0.52
@@ -225,7 +227,7 @@ def check_card(ax, x, y, title, body, a):
 
 
 def scene_checks(ax, t, a):
-    t0 = 30.0
+    t0 = 29.0
     txt(ax, 0.5, 0.92, "Two more checks", 30, FG, a, "bold")
     check_card(ax, 0.28, 0.58, "Sister proteins",
                "47 matched pairs:\none copy inside the\npower plant, one outside.\nNo difference.",
@@ -236,7 +238,7 @@ def scene_checks(ax, t, a):
 
 
 def scene_alt(ax, t, a):
-    t0 = 37.0
+    t0 = 35.5
     split = ramp(t, t0 + 5.0, t0 + 5.6)  # cell fades out, then thermometers fade in
     ac = a * (1 - ramp(t, t0 + 4.4, t0 + 5.0))
     if ac > 0.01:
@@ -260,29 +262,47 @@ def scene_alt(ax, t, a):
 
 
 def scene_next(ax, t, a):
-    t0 = 48.0
-    off = ramp(t, t0 + 2.2, t0 + 3.6)
-    cell(ax, a, cyto_heat=0.0, mito_heat=1 - off, pulse=(0.5 + 0.5 * np.sin(t * 3)) * (1 - off), cy=0.60, r=0.24)
+    """The decisive experiment: heat cells with the power plants on vs off and see when their proteins fall apart."""
+    t0 = 46.0
     txt(ax, 0.5, 0.92, "One experiment could settle it", 30, FG, a, "bold")
-    # switch
-    sx, sy = 0.5, 0.285
-    ax.add_patch(FancyBboxPatch((sx - 0.07, sy - 0.03), 0.14, 0.06, boxstyle="round,pad=0,rounding_size=0.03",
-                                facecolor=mix(HOT, FAINT, off), edgecolor=DIM, lw=2, alpha=a))
-    ax.add_patch(Circle((sx + 0.04 - 0.08 * off, sy), 0.024, color=FG, alpha=a, lw=0))
-    txt(ax, sx - 0.13, sy, "ON", 18, HOT, a * (1 - off), "bold", ha="right")
-    txt(ax, sx + 0.13, sy, "OFF", 18, COOL, a * off, "bold", ha="left")
+    pulse = 0.5 + 0.5 * np.sin(t * 3)
+    for cx, on in ((0.27, True), (0.73, False)):
+        heat = 1.0 if on else 1 - ramp(t, t0 + 0.8, t0 + 1.8)
+        cell(ax, a, cyto_heat=0.0, mito_heat=heat, pulse=pulse * heat, cx=cx, cy=0.635, r=0.165)
+        # switch above each cell
+        sx, sy = cx, 0.835
+        ax.add_patch(FancyBboxPatch((sx - 0.045, sy - 0.02), 0.09, 0.04, boxstyle="round,pad=0,rounding_size=0.02",
+                                    facecolor=mix(HOT, FAINT, 1 - heat), edgecolor=DIM, lw=1.5, alpha=a))
+        ax.add_patch(Circle((sx + 0.025 - 0.05 * (1 - heat), sy), 0.015, color=FG, alpha=a, lw=0))
+        txt(ax, sx - 0.06, sy, "power plants", 15, DIM, a, ha="right")
+        txt(ax, sx + 0.06, sy, "ON" if on else "OFF", 17, HOT if on else COOL, a, "bold", ha="left")
+    # bars: heat the power-plant proteins survive (dish temperature)
+    ab = a * ramp(t, t0 + 4.5, t0 + 5.2)
+    if ab > 0.01:
+        txt(ax, 0.5, 0.425, "Heat their proteins survive in the dish", 17, DIM, ab)
+        base = 0.24
+        for cx in (0.27, 0.73):
+            ax.add_patch(FancyBboxPatch((cx - 0.17, 0.355), base, 0.036, boxstyle="round,pad=0,rounding_size=0.01",
+                                        color=DIM, alpha=ab * 0.8, lw=0))
+        ext = 0.10 * ramp(t, t0 + 5.4, t0 + 6.6)
+        if ext > 0.002:
+            ax.add_patch(FancyBboxPatch((0.73 - 0.17 + base - 0.01, 0.355), ext + 0.01, 0.036,
+                                        boxstyle="round,pad=0,rounding_size=0.01", color=WARM, alpha=ab, lw=0))
+        al = ab * ramp(t, t0 + 6.4, t0 + 7.0)
+        txt(ax, 0.73, 0.315, "+5–10° if they run hot", 17, WARM, al, "demibold")
+        txt(ax, 0.73, 0.278, "about the same if they don't", 16, DIM, ab * ramp(t, t0 + 7.4, t0 + 8.0))
 
 
 def scene_end(ax, t, a):
     txt(ax, 0.5, 0.72, "Are mitochondria\nreally 50 °C?", 44, FG, a, "bold", linespacing=1.1)
-    txt(ax, 0.5, 0.55, "Their proteins show no sign of it.", 27, WARM, a * ramp(t, 54.2, 55.0), "demibold")
-    txt(ax, 0.5, 0.42, REPO_URL, 22, FG, a * ramp(t, 54.8, 55.6))
+    txt(ax, 0.5, 0.55, "Their proteins show no sign of it.", 27, WARM, a * ramp(t, 56.6, 57.4), "demibold")
+    txt(ax, 0.5, 0.42, REPO_URL, 22, FG, a * ramp(t, 57.1, 57.8))
     txt(ax, 0.5, 0.36, "A fresh look at public data, with AI assistance.\nNot a new lab measurement.", 16, DIM,
-        a * ramp(t, 54.8, 55.6), linespacing=1.4)
+        a * ramp(t, 57.1, 57.8), linespacing=1.4)
 
 
-SCENES = [(0.0, 8.0, scene_hook), (8.0, 17.0, scene_species), (17.0, 30.0, scene_test), (30.0, 37.0, scene_checks),
-          (37.0, 48.0, scene_alt), (48.0, 53.5, scene_next), (53.5, DURATION, scene_end)]
+SCENES = [(0.0, 8.0, scene_hook), (8.0, 16.5, scene_species), (16.5, 29.0, scene_test), (29.0, 35.5, scene_checks),
+          (35.5, 46.0, scene_alt), (46.0, 56.0, scene_next), (56.0, DURATION, scene_end)]
 
 
 def draw_caption(ax, t):

@@ -11,46 +11,50 @@ Some scientists think they run at about 50 °C,
 more than 10 degrees hotter than the rest of the cell.
 
 4
-00:00:08,000 --> 00:00:12,500
+00:00:08,000 --> 00:00:12,300
 Living things from hotter places build proteins that hold up to more heat.
 
 5
-00:00:12,500 --> 00:00:17,000
+00:00:12,300 --> 00:00:16,500
 Across 13 species, from icy seas to hot springs, the pattern holds.
 
 6
-00:00:17,000 --> 00:00:21,500
+00:00:16,500 --> 00:00:20,800
 So proteins working inside hot power plants should be built much tougher.
 
 7
-00:00:21,500 --> 00:00:25,500
+00:00:20,800 --> 00:00:24,800
 We checked public data: over 100,000 measurements, 6 species, 4 labs.
 
 8
-00:00:25,500 --> 00:00:30,000
+00:00:24,800 --> 00:00:29,000
 They're not tougher. They hold up about the same as the rest of the cell.
 
 9
-00:00:30,000 --> 00:00:32,600
+00:00:29,000 --> 00:00:31,300
 Two more checks agreed:
 
 10
-00:00:32,600 --> 00:00:37,000
+00:00:31,300 --> 00:00:35,500
 matched “sister” proteins, and an AI that reads heat-toughness from a protein's recipe.
 
 11
-00:00:37,000 --> 00:00:42,000
+00:00:35,500 --> 00:00:40,300
 Another possibility: maybe the whole cell gets just as hot, so all its proteins had to toughen up.
 
 12
-00:00:42,000 --> 00:00:48,000
+00:00:40,300 --> 00:00:46,000
 That seems unlikely. The few measurements so far show the rest of the cell warming only 1–2 degrees.
 
 13
-00:00:48,000 --> 00:00:53,500
-One simple lab test could settle it: switch the power plants off and see if their proteins suddenly look tougher.
+00:00:46,000 --> 00:00:50,500
+To settle it: heat cells in a dish and see when their proteins fall apart, with the power plants on, then off.
 
 14
-00:00:53,500 --> 00:00:57,600
+00:00:50,500 --> 00:00:56,000
+If the power plants really run hot, switching them off should let their proteins take 5–10° more heat.
+
+15
+00:00:56,000 --> 00:00:59,200
 Summary and code: link in the post.
 
